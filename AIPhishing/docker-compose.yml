@@ -31,15 +31,6 @@ services:
       - "8022:22"
     restart: unless-stopped
 
-  # Telnet service
-  telnet-server:
-    build: ./telnet
-    container_name: telnet-server
-    hostname: telnet
-    ports:
-      - "23:23"
-    restart: unless-stopped
-
   # Web proxy service (squid)
   web-proxy:
     build: ./squid
